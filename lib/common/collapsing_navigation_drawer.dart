@@ -1,5 +1,8 @@
+import 'package:TheRYDClub/AboutUs.dart';
+import 'package:TheRYDClub/ContactUs.dart';
 import 'package:flutter/material.dart';
 import 'package:TheRYDClub/custom_navigation_drawer.dart';
+import 'package:TheRYDClub/explore/explore.dart';
 
 class CollapsingNavigationDrawer extends StatefulWidget {
   @override
@@ -20,8 +23,8 @@ class CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer>
   @override
   void initState() {
     super.initState();
-    _animationController = AnimationController(
-        vsync: this, duration: Duration(milliseconds: 1000));
+    _animationController =
+        AnimationController(vsync: this, duration: Duration(milliseconds: 50));
     widthAnimation = Tween<double>(begin: maxWidth, end: minWidth)
         .animate(_animationController);
   }
@@ -62,6 +65,23 @@ class CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer>
                       setState(() {
                         currentSelectedIndex = counter;
                       });
+                      if (currentSelectedIndex == 0) {
+                        Navigator.pop(context);
+                      } else if (currentSelectedIndex == 1) {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Explore()));
+                      } else if (currentSelectedIndex == 2) {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Explore()));
+                      } else if (currentSelectedIndex == 3) {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => AboutUs()));
+                      } else if (currentSelectedIndex == 4) {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ContactUs()));
+                      }
                     },
                     isSelected: currentSelectedIndex == counter,
                     title: navigationItems[counter].title,
