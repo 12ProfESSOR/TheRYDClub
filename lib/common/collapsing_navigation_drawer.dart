@@ -1,5 +1,6 @@
 import 'package:TheRYDClub/AboutUs.dart';
 import 'package:TheRYDClub/ContactUs.dart';
+
 import 'package:flutter/material.dart';
 import 'package:TheRYDClub/custom_navigation_drawer.dart';
 import 'package:TheRYDClub/explore/explore.dart';
@@ -66,7 +67,12 @@ class CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer>
                         currentSelectedIndex = counter;
                       });
                       if (currentSelectedIndex == 0) {
-                        Navigator.pop(context);
+                        setState(() {
+                          isCollapsed = !isCollapsed;
+                          isCollapsed
+                              ? _animationController.forward()
+                              : _animationController.reverse();
+                        });
                       } else if (currentSelectedIndex == 1) {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) => Explore()));

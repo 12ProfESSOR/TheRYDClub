@@ -1,3 +1,7 @@
+import 'package:TheRYDClub/explore/explore_categories/Business_Oppurtunities.dart';
+import 'package:TheRYDClub/explore/explore_categories/SelfHelp_Books.dart';
+import 'package:TheRYDClub/explore/explore_categories/The_Morning_Masters.dart';
+
 import 'package:TheRYDClub/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -115,7 +119,38 @@ class _ExploreState extends State<Explore> {
                                       borderRadius: BorderRadius.circular(10),
                                       color: Colors.white),
                                   child: Center(
-                                    child: Text('CLICK HERE'),
+                                    child: InkWell(
+                                      onTap: () {
+                                        if (item == "images/banner1.jpg") {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  BusinessOppurtunities(),
+                                            ),
+                                          );
+                                        } else if (item ==
+                                            "images/banner2.jpg") {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  SelfHelpBooks(),
+                                            ),
+                                          );
+                                        } else if (item ==
+                                            "images/banner3.jpg") {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  TheMorningMasters(),
+                                            ),
+                                          );
+                                        }
+                                      },
+                                      child: Text('CLICK HERE'),
+                                    ),
                                   ),
                                 ),
                               ),
