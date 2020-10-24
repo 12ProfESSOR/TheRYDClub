@@ -12,9 +12,9 @@ class Explore extends StatefulWidget {
 
 class _ExploreState extends State<Explore> {
   final List<String> _listItem = [
-    'images/banner1.jpg',
-    'images/banner2.jpg',
-    'images/banner3.jpg',
+    'images/categories2.jpg',
+    'images/categories3.jpg',
+    'images/categories4.jpg',
     'images/banner4.jpg',
     'images/banner5.jpg',
     'images/banner6.jpg',
@@ -121,7 +121,7 @@ class _ExploreState extends State<Explore> {
                                   child: Center(
                                     child: InkWell(
                                       onTap: () {
-                                        if (item == "images/banner1.jpg") {
+                                        if (item == "images/categories2.jpg") {
                                           Navigator.push(
                                             context,
                                             MaterialPageRoute(
@@ -130,7 +130,7 @@ class _ExploreState extends State<Explore> {
                                             ),
                                           );
                                         } else if (item ==
-                                            "images/banner2.jpg") {
+                                            "images/categories3.jpg") {
                                           Navigator.push(
                                             context,
                                             MaterialPageRoute(
@@ -139,7 +139,7 @@ class _ExploreState extends State<Explore> {
                                             ),
                                           );
                                         } else if (item ==
-                                            "images/banner3.jpg") {
+                                            "images/categories4.jpg") {
                                           Navigator.push(
                                             context,
                                             MaterialPageRoute(
