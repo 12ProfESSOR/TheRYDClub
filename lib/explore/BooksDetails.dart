@@ -7,23 +7,34 @@ class BooksDetails {
 
 List<BooksDetails> booksDetails = [
   BooksDetails(
-      name: 'ABC',
-      detail: 'dbhfsdgfskdhfsdgfigfkhgcvsvab;usvosisbkv',
+      name: 'The INTELLIGENT INVESTOR',
+      detail: 'BIBLE OF FINANCE',
       url: 'fb.com'),
+  BooksDetails(name: '5 AM CLUB', detail: 'Morning ritual', url: 'fb1.com'),
+  BooksDetails(
+      name: 'Hakuna Matata', detail: 'Timon and Pumba', url: 'fb5.com'),
   BooksDetails(
       name: 'ABCD',
-      detail: 'dbhfsdgfskdhfsdgfigfkhgcvsvab;uskv',
-      url: 'fb1.com'),
+      detail: 'dbhfsdgfskdhjdbjbvjbfsdcvsvab;usvosisbkv',
+      url: 'fb2.com'),
+  BooksDetails(
+      name: 'ABCQ',
+      detail: 'dbhfsdgfskdhfsffdhdgfi;usvosisbkv',
+      url: 'fb3.com'),
+  BooksDetails(
+      name: 'ABCV',
+      detail: 'dbhfsdgfskdhfsdgfigfkhgcvsosisbkv',
+      url: 'fb8.com'),
   BooksDetails(
       name: 'ABCCEF',
       detail: 'dbhfsdgfskdhfsdgfigfkhgcvsvab;usvosisbkv',
       url: 'fb5.com'),
   BooksDetails(
-      name: 'ABCD', detail: 'dbhfsdgfskdhfsdcvsvab;usvosisbkv', url: 'fb2.com'),
+      name: 'ABCD',
+      detail: 'dbhfsdgfskdhjdbjbvjbfsdcvsvab;usvosisbkv',
+      url: 'fb2.com'),
   BooksDetails(
-      name: 'ABCQ', detail: 'dbhfsdgfskdhfsdgfi;usvosisbkv', url: 'fb3.com'),
-  BooksDetails(
-      name: 'ABCV',
-      detail: 'dbhfsdgfskdhfsdgfigfkhgcvsosisbkv',
-      url: 'fb8.com'),
+      name: 'ABCQ',
+      detail: 'dbhfsdgfskdhfsffdhdgfi;usvosisbkv',
+      url: 'fb3.com'),
 ];

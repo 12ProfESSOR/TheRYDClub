@@ -19,7 +19,7 @@ class _SelfHelpBooksState extends State<SelfHelpBooks> {
             child: Text('EXPLORE'),
           ),
         ),
-        body: SafeArea(
+        body: Container(
           child: SingleChildScrollView(
             child: Container(
               color: selectedColor,
@@ -37,7 +37,7 @@ class _SelfHelpBooksState extends State<SelfHelpBooks> {
                     ),
                   ),
                   SizedBox(height: 20.0),
-                  InkWell(onTap: () {}, child: BooksList()),
+                  BooksList(),
                 ],
               ),
             ),
