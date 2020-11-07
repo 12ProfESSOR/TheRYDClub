@@ -11,6 +11,15 @@ class _BooksLayoutState extends State<BooksLayout> {
   @override
   Widget build(BuildContext context) {
     final BooksDetails booksDetails = ModalRoute.of(context).settings.arguments;
+    _launchURL() async {
+      var url = booksDetails.link;
+      if (await canLaunch(url)) {
+        await launch(url);
+      } else {
+        throw 'Could not Launch $url';
+      }
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: Text(booksDetails.name),
@@ -50,14 +59,5 @@ class _BooksLayoutState extends State<BooksLayout> {
         ],
       ),
     );
-  }
-}
-
-_launchURL() async {
-  dynamic url = 'https://flutter.dev';
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not Launch $url';
   }
 }
