@@ -32,7 +32,8 @@ class _BooksLayoutState extends State<BooksLayout> {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               image: DecorationImage(
-                  image: AssetImage('images/banner1.jpg'), fit: BoxFit.cover),
+                image: ImageProvider(booksDetails.display),
+              ),
             ),
           ),
           SizedBox(height: 20.0),
@@ -41,8 +42,9 @@ class _BooksLayoutState extends State<BooksLayout> {
               margin: EdgeInsets.all(10.0),
               padding: EdgeInsets.all(10.0),
               width: double.infinity,
-              color: Colors.red,
-              child: Text(booksDetails.detail),
+              child: SingleChildScrollView(
+                child: Text(booksDetails.detail),
+              ),
             ),
           ),
           Container(
@@ -50,7 +52,6 @@ class _BooksLayoutState extends State<BooksLayout> {
             margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
             height: 30.0,
             child: RaisedButton(
-              color: Colors.amber,
               onPressed: (_launchURL),
               child: Text('BUY NOW'),
               elevation: 2,
