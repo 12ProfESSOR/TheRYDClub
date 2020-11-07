@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:TheRYDClub/explore/BooksDetails.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class BooksLayout extends StatefulWidget {
   @override
@@ -26,18 +27,37 @@ class _BooksLayoutState extends State<BooksLayout> {
             ),
           ),
           SizedBox(height: 20.0),
-          Container(
-            child: Text(booksDetails.detail),
+          Expanded(
+            child: Container(
+              margin: EdgeInsets.all(10.0),
+              padding: EdgeInsets.all(10.0),
+              width: double.infinity,
+              color: Colors.red,
+              child: Text(booksDetails.detail),
+            ),
           ),
           Container(
+            width: double.infinity,
+            margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
+            height: 30.0,
             child: RaisedButton(
-              onPressed: () {},
-              child: Text('Hello'),
-              elevation: 5,
+              color: Colors.amber,
+              onPressed: (_launchURL),
+              child: Text('BUY NOW'),
+              elevation: 2,
             ),
           ),
         ],
       ),
     );
+  }
+}
+
+_launchURL() async {
+  dynamic url = 'https://flutter.dev';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not Launch $url';
   }
 }

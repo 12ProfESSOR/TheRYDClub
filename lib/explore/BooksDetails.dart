@@ -9,8 +9,11 @@ List<BooksDetails> booksDetails = [
   BooksDetails(
       name: 'The INTELLIGENT INVESTOR',
       detail: 'BIBLE OF FINANCE',
-      url: 'fb.com'),
-  BooksDetails(name: '5 AM CLUB', detail: 'Morning ritual', url: 'fb1.com'),
+      url: 'https://amzn.to/2TWVMeY'),
+  BooksDetails(
+      name: '5 AM CLUB',
+      detail: 'Morning ritual',
+      url: 'https://amzn.to/3eBsMCX'),
   BooksDetails(
       name: 'Hakuna Matata', detail: 'Timon and Pumba', url: 'fb5.com'),
   BooksDetails(
