@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:TheRYDClub/explore/BooksDetails.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -20,6 +22,15 @@ class _BooksLayoutState extends State<BooksLayout> {
       }
     }
 
+    _launchVIDEO() async {
+      var video = booksDetails.video;
+      if (await canLaunch(video)) {
+        await launch(video);
+      } else {
+        throw 'Could not Launch $video';
+      }
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: Text(booksDetails.name),
@@ -32,7 +43,7 @@ class _BooksLayoutState extends State<BooksLayout> {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               image: DecorationImage(
-                image: ImageProvider(booksDetails.display),
+                image: booksDetails.display,
               ),
             ),
           ),
@@ -43,8 +54,20 @@ class _BooksLayoutState extends State<BooksLayout> {
               padding: EdgeInsets.all(10.0),
               width: double.infinity,
               child: SingleChildScrollView(
-                child: Text(booksDetails.detail),
+                child: Text(
+                  booksDetails.detail,
+                ),
               ),
+            ),
+          ),
+          Container(
+            width: double.infinity,
+            margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
+            height: 30.0,
+            child: RaisedButton(
+              onPressed: (_launchVIDEO),
+              child: Text('WATCH VIDEO'),
+              elevation: 2,
             ),
           ),
           Container(

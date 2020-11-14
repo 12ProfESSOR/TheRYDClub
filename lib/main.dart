@@ -10,7 +10,6 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: HomePage(),
       theme: ThemeData(
-        fontFamily: "poppins",
         scaffoldBackgroundColor: Colors.white,
       ),
     );
