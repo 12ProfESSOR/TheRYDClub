@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:TheRYDClub/explore/BooksDetails.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -31,6 +29,7 @@ class _BooksLayoutState extends State<BooksLayout> {
       }
     }
 
+    int _selectedIndex = 0;
     return Scaffold(
       appBar: AppBar(
         title: Text(booksDetails.name),
@@ -81,6 +80,24 @@ class _BooksLayoutState extends State<BooksLayout> {
             ),
           ),
         ],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.category),
+            label: 'Categories',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.notifications),
+            label: 'Notification',
+          ),
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.blueGrey,
       ),
     );
   }
