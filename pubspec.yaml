@@ -72,6 +72,6 @@ flutter:
       fonts:
         - asset: fonts/RobotoSlab-Black.ttf
         - asset: fonts/RobotoSlab-Light.ttf
-          style: italic
+          
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

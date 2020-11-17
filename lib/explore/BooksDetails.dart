@@ -12,7 +12,7 @@ class BooksDetails {
 
 List<BooksDetails> booksDetails = [
   BooksDetails(
-      name: 'The INTELLIGENT INVESTOR',
+      name: 'THE INTELLIGENT INVESTOR',
       display: AssetImage('images/TheIntelligentInvestor.jpg'),
       video: 'https://www.facebook.com',
       detail:

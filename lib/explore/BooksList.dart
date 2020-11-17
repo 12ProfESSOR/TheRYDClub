@@ -29,7 +29,12 @@ class _BooksListState extends State<BooksList> {
                 );
               },
               child: ListTile(
-                title: Text(booksDetails[index].name),
+                title: Center(
+                  child: Text(
+                    booksDetails[index].name,
+                    style: TextStyle(fontFamily: 'Anton-Regular'),
+                  ),
+                ),
               ),
             ),
           );

@@ -28,13 +28,17 @@ class _SelfHelpBooksState extends State<SelfHelpBooks> {
                 children: <Widget>[
                   Container(
                     width: double.infinity,
-                    height: 200,
+                    height: 150,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       image: DecorationImage(
-                          image: AssetImage('images/banner1.jpg'),
-                          fit: BoxFit.cover),
+                          image:
+                              AssetImage('images/TheIntelligentInvestor.jpg'),
+                          fit: BoxFit.contain),
                     ),
+                  ),
+                  Container(
+                    child: Text('This Month\'s Special'),
                   ),
                   SizedBox(height: 20.0),
                   BooksList(),
